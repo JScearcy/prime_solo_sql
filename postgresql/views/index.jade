@@ -5,7 +5,7 @@ block content
   for result in results
     ul(class="order")
       li= result[0].name
-      li= result[0].order_id
+      li= 'Order Number: ' + result[0].order_id
       for item in result 
         li 
           ul(class='orderItem')
