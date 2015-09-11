@@ -28,10 +28,13 @@ router.get('/custinfo', function(req, res, next) {
           var newResults = {};
           results.forEach(function(product, index){
             if (product.order_id != lastProduct){
-              newResults[product.order_id] = [product];
+              newResults[product.order_id] =  {order: [product]};
+              newResults[product.order_id].price =  product.product_price * product.product_amount;
               lastProduct = product.order_id;
+
             } else {
-              newResults[product.order_id].push(product);
+              newResults[product.order_id].order.push(product);
+              newResults[product.order_id].price = newResults[product.order_id].price + product.product_price * product.product_amount;
             }
           });
           console.log(newResults);

@@ -2,17 +2,20 @@ extends layout
 
 block content
   h1 Customer orders
-  for result in results
-    ul(class="order")
-      li= result[0].name
-      li= 'Order Number: ' + result[0].order_id
-      for item in result 
-        li 
-          ul(class='orderItem')
-            li #{item.product_name}
-            li= 'Amount: ' + item.product_amount
-            li= 'Price: $' + item.product_price
-            li= 'Subtotal: $' + item.product_amount * item.product_price + '.00'
+  .orderDiv
+    for result in results
+      ul(class="order")
+        li= 'Customer: ' + result.order[0].name
+        li= 'Order Number: ' + result.order[0].order_id
+        li(class="orderTotal")= 'Total: $' + result.price + '.00'
+        for item in result.order 
+          li 
+            ul(class='orderItem')
+              li Item: 
+              li #{item.product_name}
+              li= 'Amount: ' + item.product_amount
+              li= 'Price: $' + item.product_price
+              li= 'Subtotal: $' + item.product_amount * item.product_price + '.00'
 
       
 
