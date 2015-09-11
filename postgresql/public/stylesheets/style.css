@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #AAA
 }
 
 a {
@@ -15,11 +16,14 @@ a {
   min-height: 350px;
   display: inline-block;
   vertical-align: top;
+  background-color: #FFF;
 }
 .orderItem {
+  list-style-type: none;
   border: 1px solid black;
   margin: 1px auto;
-  width: 70%
+  width: 70%;
+  background-color: #6AA;
 }
 .orderTotal {
   margin-bottom: 10px;

@@ -10,9 +10,8 @@ block content
         li(class="orderTotal")= 'Total: $' + result.price + '.00'
         for item in result.order 
           li 
-            ul(class='orderItem')
-              li Item: 
-              li #{item.product_name}
+            ul(class='orderItem') 
+              li= 'Item: ' + item.product_name
               li= 'Amount: ' + item.product_amount
               li= 'Price: $' + item.product_price
               li= 'Subtotal: $' + item.product_amount * item.product_price + '.00'
