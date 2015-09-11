@@ -29,6 +29,7 @@ INSERT INTO authors(id, last_name, first_name)
 INSERT INTO daily_inventory(isbn, is_stocked)
 	VALUES('9780671577728', TRUE),
 		('9781439568231', TRUE);
+INSERT INTO stock()
 -- What authors have books that are not in stock?
 SELECT first_name, last_name FROM authors
   WHERE id IN (SELECT author_id FROM books
