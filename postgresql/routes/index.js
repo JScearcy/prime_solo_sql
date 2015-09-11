@@ -3,7 +3,7 @@ var router = express.Router();
 var pg = require('pg');
 var connect = process.env.DATABASE_URL || 'postgres://localhost:5432/customer_information';
 
-router.get('/custinfo', function(req, res, next) {
+router.get('/', function(req, res, next) {
   var results = [];
   pg.connect(connect, function(err, client, done) {
       var query = client.query("SELECT orders.order_id, \

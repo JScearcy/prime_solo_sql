@@ -28,3 +28,28 @@ a {
 .orderTotal {
   margin-bottom: 10px;
 }
+@media (max-width: 1000px) {
+  .orderItem {
+    list-style-type: none;
+    border: 1px solid black;
+    margin: 1px auto;
+    width: 90%;
+    padding-left: 0px;
+    background-color: #6AA;
+  }
+  .orderTotal {
+    margin-bottom: 10px;
+  }
+  .order {
+    list-style-type: none;
+    margin: 10px;
+    padding-left: 5px;
+    border: 2px solid black;
+    width: 20%;
+    min-height: 360px;
+    min-width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #FFF;
+  }
+}
